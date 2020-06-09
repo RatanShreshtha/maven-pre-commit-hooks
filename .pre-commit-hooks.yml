@@ -1,0 +1,21 @@
+---
+- id: "mvn-compile"
+  name: "mvn compile"
+  description: "Runs mvn clean compile to ensure that there is compilation error."
+  language: "script"
+  entry: run-mvn-compile.sh
+  verbose: true
+
+- id: "mvn-test"
+  name: "mvn test"
+  description: "Runs mvn clean test -DminimumCoverage=0.90 to ensure coverage is at least 90%."
+  language: "script"
+  entry: run-mvn-test.sh
+  verbose: true
+
+- id: "mvn-checkstyle"
+  name: "mvn checkstyle"
+  description: "Runs the checkstyle static code analysis tool."
+  language: "script"
+  entry: run-mvn-checkstyle.sh
+  verbose: true
